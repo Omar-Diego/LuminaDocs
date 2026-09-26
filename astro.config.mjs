@@ -33,6 +33,7 @@ export default defineConfig({
 			},
 			components: {
 				ThemeSelect: './src/components/NoThemeSelect.astro',
+				ThemeProvider: './src/components/ForceLightTheme.astro',
 			},
 			// Un solo tema de resaltado de código (claro) — evita que Expressive Code
 			// genere una variante oscura que se active con el modo oscuro del sistema.

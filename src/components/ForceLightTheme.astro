@@ -1,0 +1,10 @@
+{/*
+  Lumina es un tema único claro (ver DESIGN.md). Reemplaza al ThemeProvider
+  por defecto de Starlight, que en cada carga de página lee localStorage o
+  `prefers-color-scheme` del sistema y puede fijar data-theme="dark" — la
+  causa real de que el sitio se viera en modo oscuro pese a no tener selector
+  de tema visible (ver componentes/schemas/components.ts de Starlight).
+*/}
+<script is:inline>
+	document.documentElement.dataset.theme = 'light';
+</script>
