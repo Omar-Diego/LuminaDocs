@@ -6,30 +6,33 @@
 [data-theme='light'] ::backdrop,
 :root[data-theme='dark'],
 [data-theme='dark'] ::backdrop {
-	--sl-color-white: #4b4b4b; /* Charcoal — encabezados de alto contraste */
-	--sl-color-gray-1: #4b4b4b;
-	--sl-color-gray-2: #777777; /* Pencil Gray — texto de cuerpo */
-	--sl-color-gray-3: #999999;
-	--sl-color-gray-4: #afafaf; /* Faded Gray — texto/bordes de baja énfasis */
-	--sl-color-gray-5: #e2e2e2;
-	--sl-color-gray-6: #f0f0f0;
-	--sl-color-gray-7: #fafafa;
-	--sl-color-black: #ffffff; /* Paper White — lienzo de página */
+	/* !important: en el build de producción, Vite reordena el CSS y los valores
+	   por defecto de Starlight para modo oscuro pueden quedar después de este
+	   bloque en el bundle final, ganando el empate de especificidad. */
+	--sl-color-white: #4b4b4b !important; /* Charcoal — encabezados de alto contraste */
+	--sl-color-gray-1: #4b4b4b !important;
+	--sl-color-gray-2: #777777 !important; /* Pencil Gray — texto de cuerpo */
+	--sl-color-gray-3: #999999 !important;
+	--sl-color-gray-4: #afafaf !important; /* Faded Gray — texto/bordes de baja énfasis */
+	--sl-color-gray-5: #e2e2e2 !important;
+	--sl-color-gray-6: #f0f0f0 !important;
+	--sl-color-gray-7: #fafafa !important;
+	--sl-color-black: #ffffff !important; /* Paper White — lienzo de página */
 
-	--sl-color-accent-low: #d7ffb8; /* Storybook Green */
-	--sl-color-accent: #58cc02; /* Eager Green */
-	--sl-color-accent-high: #1cb0f6; /* Spark Blue — color de enlaces/acentos de texto */
+	--sl-color-accent-low: #d7ffb8 !important; /* Storybook Green */
+	--sl-color-accent: #58cc02 !important; /* Eager Green */
+	--sl-color-accent-high: #1cb0f6 !important; /* Spark Blue — color de enlaces/acentos de texto */
 
-	--sl-color-bg-nav: #ffffff;
-	--sl-color-bg-sidebar: #ffffff;
-	--sl-color-bg-inline-code: #f0f0f0;
-	--sl-color-hairline-light: #e2e2e2;
-	--sl-color-hairline: #e2e2e2;
-	--sl-color-hairline-shade: #cfcfcf;
+	--sl-color-bg-nav: #ffffff !important;
+	--sl-color-bg-sidebar: #ffffff !important;
+	--sl-color-bg-inline-code: #f0f0f0 !important;
+	--sl-color-hairline-light: #e2e2e2 !important;
+	--sl-color-hairline: #e2e2e2 !important;
+	--sl-color-hairline-shade: #cfcfcf !important;
 
-	--sl-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	--sl-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
 
-	color-scheme: light;
+	color-scheme: light !important;
 }
 
 /* Botones: relleno verde para la acción primaria, borde 2px para las secundarias — DESIGN.md */
