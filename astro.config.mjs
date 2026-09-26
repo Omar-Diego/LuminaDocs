@@ -1,13 +1,24 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import mermaid from 'astro-mermaid';
 
 // https://astro.build/config
 export default defineConfig({
 	integrations: [
+		mermaid({
+			theme: 'forest',
+			autoTheme: true,
+		}),
 		starlight({
-			title: 'Tutorías Web',
+			title: 'Lumina',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			head: [
+				{ tag: 'link', attrs: { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' } },
+				{ tag: 'link', attrs: { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' } },
+				{ tag: 'link', attrs: { rel: 'manifest', href: '/site.webmanifest' } },
+			],
+			customCss: ['./src/styles/custom.css'],
 			sidebar: [
 				{
 					label: 'Proyecto',
