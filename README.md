@@ -1,3 +1,9 @@
+# Lumina — Documentación
+
+Sitio de documentación del proyecto Lumina (requerimientos, metodología y arquitectura), construido con Astro + Starlight. El sistema de diseño de referencia vive en [`DESIGN.md`](./DESIGN.md).
+
+---
+
 # Starlight Starter Kit: Basics
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)

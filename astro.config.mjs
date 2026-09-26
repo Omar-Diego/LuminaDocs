@@ -28,6 +28,11 @@ export default defineConfig({
 		}),
 		starlight({
 			title: 'Lumina',
+			logo: {
+				src: './src/assets/logo-lumina.png',
+				alt: 'Lumina',
+				replacesTitle: true,
+			},
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			head: [
 				{ tag: 'link', attrs: { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' } },
