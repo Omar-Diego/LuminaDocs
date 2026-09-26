@@ -35,6 +35,12 @@
 	color-scheme: light !important;
 }
 
+/* Ítem activo del sidebar: verde (no el azul de --sl-color-text-accent, reservado a enlaces) — DESIGN.md */
+.sidebar-content a[aria-current='page'] {
+	background-color: #58cc02 !important;
+	color: #ffffff !important;
+}
+
 /* Botones: relleno verde para la acción primaria, borde 2px para las secundarias — DESIGN.md */
 .sl-link-button {
 	border-radius: 12px;
