@@ -133,6 +133,7 @@ export default defineConfig({
 					items: [
 						{ label: 'Parte 1: Requerimientos y Metodología', slug: 'parte-1-requerimientos' },
 						{ label: 'Parte 2: Arquitectura y Modelado', slug: 'parte-2-arquitectura' },
+						{ label: 'Parte 3: Prototipado y Pruebas', slug: 'parte-3-prototipado' },
 					],
 				},
 			],
