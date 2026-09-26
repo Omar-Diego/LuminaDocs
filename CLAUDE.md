@@ -20,3 +20,9 @@ Consult these guides before working on related tasks:
 - [Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
 - [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
 - [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
+
+## Commits
+
+- Usar **Conventional Commits** (`feat:`, `fix:`, `refactor:`, etc.) para el mensaje del commit.
+- No agregar a Claude como coautor ni colaborador (sin `Co-Authored-By`).
+- Commitear solo los archivos relevantes al cambio solicitado; dejar intactos otros cambios pendientes no relacionados en el working tree.
