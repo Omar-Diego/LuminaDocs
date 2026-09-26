@@ -28,6 +28,12 @@ export default defineConfig({
 		}),
 		starlight({
 			title: 'Lumina',
+			locales: {
+				root: { label: 'Español', lang: 'es' },
+			},
+			components: {
+				ThemeSelect: './src/components/NoThemeSelect.astro',
+			},
 			logo: {
 				src: './src/assets/logo-lumina.png',
 				alt: 'Lumina',
@@ -123,17 +129,6 @@ export default defineConfig({
 						{ label: 'Parte 1: Requerimientos y Metodología', slug: 'parte-1-requerimientos' },
 						{ label: 'Parte 2: Arquitectura y Modelado', slug: 'parte-2-arquitectura' },
 					],
-				},
-				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
-				},
-				{
-					label: 'Reference',
-					items: [{ autogenerate: { directory: 'reference' } }],
 				},
 			],
 		}),
