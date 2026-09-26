@@ -1,0 +1,155 @@
+/* Lumina — tema derivado de DESIGN.md (referencia Duolingo, marca única en modo claro). */
+
+:root,
+::backdrop,
+:root[data-theme='light'],
+[data-theme='light'] ::backdrop,
+:root[data-theme='dark'],
+[data-theme='dark'] ::backdrop {
+	--sl-color-white: #4b4b4b; /* Charcoal — encabezados de alto contraste */
+	--sl-color-gray-1: #4b4b4b;
+	--sl-color-gray-2: #777777; /* Pencil Gray — texto de cuerpo */
+	--sl-color-gray-3: #999999;
+	--sl-color-gray-4: #afafaf; /* Faded Gray — texto/bordes de baja énfasis */
+	--sl-color-gray-5: #e2e2e2;
+	--sl-color-gray-6: #f0f0f0;
+	--sl-color-gray-7: #fafafa;
+	--sl-color-black: #ffffff; /* Paper White — lienzo de página */
+
+	--sl-color-accent-low: #d7ffb8; /* Storybook Green */
+	--sl-color-accent: #58cc02; /* Eager Green */
+	--sl-color-accent-high: #1cb0f6; /* Spark Blue — color de enlaces/acentos de texto */
+
+	--sl-color-bg-nav: #ffffff;
+	--sl-color-bg-sidebar: #ffffff;
+	--sl-color-bg-inline-code: #f0f0f0;
+	--sl-color-hairline-light: #e2e2e2;
+	--sl-color-hairline: #e2e2e2;
+	--sl-color-hairline-shade: #cfcfcf;
+
+	--sl-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+	color-scheme: light;
+}
+
+/* Botones: relleno verde para la acción primaria, borde 2px para las secundarias — DESIGN.md */
+.sl-link-button {
+	border-radius: 12px;
+}
+.sl-link-button.primary {
+	background: #58cc02;
+	border-color: #58cc02;
+	color: #ffffff;
+}
+.sl-link-button.secondary {
+	border-width: 2px;
+	border-color: #afafaf;
+	color: #1cb0f6;
+}
+.sl-link-button.minimal {
+	color: #1cb0f6;
+}
+
+/* Tarjetas: bordes redondeados 12px, borde 2px al estilo "sticker" — DESIGN.md */
+.card {
+	border-radius: 12px;
+	border-width: 2px;
+}
+
+/* Botón de pantalla completa sobre cada diagrama mermaid — DESIGN.md */
+pre.mermaid[data-processed] {
+	position: relative;
+}
+.mermaid-expand-btn {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	padding: 0;
+	background: #ffffff;
+	border: 2px solid #afafaf;
+	border-radius: 12px;
+	color: #777777;
+	cursor: pointer;
+	opacity: 0;
+	transition: opacity 0.15s, border-color 0.15s, color 0.15s;
+}
+pre.mermaid[data-processed]:hover .mermaid-expand-btn,
+.mermaid-expand-btn:focus-visible {
+	opacity: 1;
+}
+.mermaid-expand-btn:hover {
+	border-color: #1cb0f6;
+	color: #1cb0f6;
+}
+
+/* Visor de pantalla completa (dialog nativo) para diagramas mermaid — DESIGN.md */
+#mermaid-fullscreen-dialog {
+	position: fixed;
+	inset: 0;
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+	max-width: 100vw;
+	max-height: 100vh;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+	background: #ffffff;
+}
+#mermaid-fullscreen-dialog::backdrop {
+	background: rgba(0, 4, 55, 0.6);
+}
+#mermaid-fullscreen-dialog .mermaid-fullscreen-content {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 32px;
+	box-sizing: border-box;
+}
+#mermaid-fullscreen-dialog .mermaid-fullscreen-content svg {
+	width: 100% !important;
+	height: 100% !important;
+	max-width: 100% !important;
+	max-height: 100% !important;
+}
+#mermaid-fullscreen-dialog .mermaid-fullscreen-close {
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #ffffff;
+	border: 2px solid #afafaf;
+	border-radius: 12px;
+	color: #4b4b4b;
+	cursor: pointer;
+}
+#mermaid-fullscreen-dialog .mermaid-fullscreen-close:hover {
+	border-color: #1cb0f6;
+	color: #1cb0f6;
+}
+
+/* Logo como título del hero en vez de texto "Lumina" */
+.hero-logo {
+	height: clamp(2.5rem, 4vw + 1.5rem, 4.5rem);
+	width: auto;
+}
+
+/* Mascota del hero: HTML crudo (no <Image>) para que no se recorte, volteada para saludar hacia el texto */
+.hero-mascot {
+	display: block;
+	width: 100%;
+	height: auto;
+	transform: scaleX(-1);
+}
