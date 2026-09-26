@@ -140,6 +140,47 @@ pre.mermaid[data-processed]:hover .mermaid-expand-btn,
 	color: #1cb0f6;
 }
 
+/* Tablas: encabezado con tinte Storybook Green, filas alternadas, bordes suaves — DESIGN.md */
+.sl-markdown-content table {
+	display: inline-block;
+	max-width: 100%;
+	vertical-align: top;
+	border-collapse: collapse;
+	border: 1px solid #e2e2e2;
+	border-radius: 12px;
+	overflow-x: auto;
+}
+.sl-markdown-content thead th {
+	background: #d7ffb8;
+	color: #000437;
+	font-weight: 700;
+	border-bottom: 2px solid #58cc02;
+}
+.sl-markdown-content tbody tr:nth-child(even) {
+	background: #fafafa;
+}
+.sl-markdown-content td,
+.sl-markdown-content th {
+	border: 1px solid #e2e2e2;
+	padding: 8px 12px;
+}
+
+/* Insignias de prioridad/categoría dentro de tablas — DESIGN.md */
+.badge {
+	display: inline-block;
+	padding: 2px 10px;
+	border-radius: 12px;
+	font-weight: 700;
+	font-size: 0.8em;
+	color: #ffffff;
+	white-space: nowrap;
+}
+.badge-green { background: #58cc02; }
+.badge-blue { background: #1cb0f6; }
+.badge-violet { background: #000437; }
+.badge-leaf { background: #a5ed6e; color: #000437; }
+.badge-gray { background: #afafaf; color: #4b4b4b; }
+
 /* Logo como título del hero en vez de texto "Lumina" */
 .hero-logo {
 	height: clamp(2.5rem, 4vw + 1.5rem, 4.5rem);
