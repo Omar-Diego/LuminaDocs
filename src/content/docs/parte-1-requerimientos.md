@@ -113,6 +113,6 @@ Tablero: [Tutorías Presenciales — MVP académico (21-25 sep 2026)](https://tr
 ### Flujo de trabajo
 
 1. **Planificación de sprint:** se seleccionan historias de usuario del Product Backlog y se dividen en tareas del Sprint Backlog.
-2. **Ejecución:** cada tarea avanza por el tablero Kanban (Por hacer → En progreso → Hecho); al ser un equipo de una persona no hay daily formal, pero el avance se registra diariamente moviendo las tarjetas.
+2. **Ejecución:** cada tarea avanza por el tablero Kanban (Por hacer → En progreso → Hecho); el equipo, formado por dos integrantes, coordina el avance directamente en vez de una daily formal, y lo registra moviendo las tarjetas.
 3. **Revisión de sprint:** se valida el incremento contra los criterios de aceptación de la matriz de requerimientos (sección 2).
 4. **Retrospectiva:** se ajustan prioridades o alcance del siguiente sprint según hallazgos (riesgos detectados, cambios de requerimientos o retroalimentación simulada de usuarios).
