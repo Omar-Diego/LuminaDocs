@@ -190,16 +190,96 @@ pre.mermaid[data-processed]:hover .mermaid-expand-btn,
 .badge-leaf { background: #a5ed6e; color: #000437; }
 .badge-gray { background: #afafaf; color: #4b4b4b; }
 
-/* Logo como título del hero en vez de texto "Lumina" */
-.hero-logo {
-	height: clamp(2.5rem, 4vw + 1.5rem, 4.5rem);
-	width: auto;
+/* Hero del inicio — titular Nunito Black (sustituto de Feather según DESIGN.md) en Charcoal */
+.hero {
+	padding-block: clamp(2rem, 1rem + 6vmin, 5.5rem);
+}
+.hero h1 {
+	font-family: 'Nunito', var(--sl-font);
+	font-weight: 900;
+	font-size: clamp(2.25rem, 1.4rem + 3.4vw, 4rem);
+	line-height: 1.1;
+	letter-spacing: -0.02em;
+	color: #4b4b4b;
+}
+/* Frase clave resaltada con marcador Storybook Green: el texto sigue en Charcoal para mantener contraste AA */
+.hero-mark {
+	background: linear-gradient(transparent 58%, #d7ffb8 58%);
+	padding-inline: 0.08em;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+}
+.hero .copy {
+	gap: 1.25rem;
+}
+.hero .tagline {
+	font-size: clamp(1.0625rem, 1rem + 0.4vw, 1.1875rem);
+	line-height: 1.55;
+	max-width: 46ch;
+	color: #777777;
+}
+.hero .tagline strong {
+	color: #4b4b4b;
+}
+.hero .actions {
+	gap: 0.75rem 1rem;
+}
+.hero .sl-link-button {
+	font-weight: 700;
+}
+
+/* Mascota sobre un círculo Storybook Green con un acento Spark Blue claro */
+.hero-art {
+	position: relative;
+	display: grid;
+	place-items: center;
+	width: 100%;
+}
+.hero-art::before,
+.hero-art::after {
+	content: '';
+	position: absolute;
+	border-radius: 50%;
+}
+.hero-art::before {
+	width: 84%;
+	aspect-ratio: 1;
+	background: #d7ffb8;
+}
+.hero-art::after {
+	top: 4%;
+	right: 6%;
+	width: 18%;
+	aspect-ratio: 1;
+	background: #eaf7ff;
+}
+
+/* Video demo del inicio: card con el radio y la sombra de DESIGN.md */
+.demo-video {
+	display: block;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	border-radius: 20px;
+	box-shadow: 0 10px 30px rgba(30, 42, 74, 0.07), 0 2px 6px rgba(30, 42, 74, 0.04);
+	background: #eff5fc;
 }
 
 /* Mascota del hero: HTML crudo (no <Image>) para que no se recorte, volteada para saludar hacia el texto */
 .hero-mascot {
+	position: relative;
+	z-index: 1;
 	display: block;
-	width: 100%;
+	width: 88%;
 	height: auto;
 	transform: scaleX(-1);
+}
+@media (prefers-reduced-motion: no-preference) {
+	.hero-mascot {
+		animation: hero-float 4s ease-in-out infinite;
+	}
+}
+@keyframes hero-float {
+	50% {
+		transform: scaleX(-1) translateY(-10px);
+	}
 }

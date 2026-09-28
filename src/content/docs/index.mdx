@@ -3,21 +3,30 @@ title: Lumina
 description: Documentación del proyecto Lumina — plataforma de gestión de tutorías presenciales.
 template: splash # Remove or comment out this line to display the site sidebar on this page.
 hero:
-  title: '<img src="/logo-lumina.png" alt="Lumina" class="hero-logo" />'
-  tagline: Documentación de requerimientos, metodología y arquitectura de Lumina.
+  title: 'Tutorías presenciales, <span class="hero-mark">sin complicaciones</span>'
+  tagline: 'Documentación de <strong>Lumina</strong>: requerimientos, metodología, arquitectura y prototipado de la plataforma que conecta estudiantes con tutores verificados.'
   image:
-    html: '<img src="/luminadocs.png" alt="Mascota de Lumina" class="hero-mascot" />'
+    html: '<div class="hero-art"><img src="/luminadocs.png" alt="Mascota de Lumina" class="hero-mascot" /></div>'
   actions:
-    - text: "Parte 1: Requerimientos y Metodología"
+    - text: Comenzar a leer
       link: /parte-1-requerimientos/
       icon: right-arrow
-    - text: "Parte 2: Arquitectura y Modelado"
-      link: /parte-2-arquitectura/
-      icon: right-arrow
-      variant: minimal
+    - text: Ver Lumina en producción
+      link: https://lumina.osdc.cloud/
+      icon: external
+      variant: secondary
+      attrs:
+        target: _blank
+        rel: noopener
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Lumina en acción
+
+<video class="demo-video" src="/lumina-promo.mp4" poster="/lumina-promo-poster.jpg" controls playsInline preload="metadata"></video>
+
+Recorrido por el flujo del estudiante (buscar tutor, reservar, calificar) y del tutor (publicar franjas, ver reservas). Pruébalo tú mismo en **[lumina.osdc.cloud](https://lumina.osdc.cloud/)**.
 
 ## Overview
 
